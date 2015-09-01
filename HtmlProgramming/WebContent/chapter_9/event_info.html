@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			console.log(true || false);
+			console.log(false || true);
+			console.log(false || 3);/* 자바스크립트에서는 앞에 것이 false가 되면 뒤에것이 산출되어버림. */
+			console.log(0 || 3);
+			console.log(1 || 3);
+			console.log(null || 3);
+			console.log('' || 3);
+			console.log(undefined || 3);/* 자바 스크립에서 변수가 선언되지 않은 상태: undefined  */
+			var v1;
+			console.log(v1);/* undefiend라는 값이 들어감 */
+			console.log(v1 || 3);
+			
+			var v2=3/0;
+			console.log(v2);
+			console.log(v2 || 3);
+			
+		</script>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var div1 = document.querySelector("#div1");
+				div1.onclick = function(event){
+					/* e = e || window.event;
+					event가 들어오지 않으면 window.event를 리턴함 
+					크롬은 매개변수만 받아도 event 리턴하지만 인터넷 익스플로러는 window.event써야함
+					어떤 브라우저든 window.event 실행하게 하는 것*/ 
+					console.log(event);
+					console.log(event.clientX);
+					console.log(event.clientY);
+					console.log("div-click");
+					/* 무엇을 리턴하는지 모를 때 객체를 출력해보기*/
+					/* 현재는 이렇게 event 객체 받아서 쓰는게 정석! */
+				}
+			};
+		</script>
+	</head>
+	
+	<body>
+		<div id="div1" style="width:300px;height:300px;border:1px solid black"></div>
+	</body>
+</html>
+
+
+
+

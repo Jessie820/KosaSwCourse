@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script> 
+		<script type="text/javascript">
+			/* $("#link").on("click", function(){}); */
+			
+			//jQuery 안 쓸 때
+			$(function(){
+				
+			var link1 = document.querySelector("#link1");
+			//정식 방법은 event를 넣어주는 건데 브라우저 종류에 따라 매개값으로 event가 안 들어올 수도 있음.
+			//그래서 매개값으로 event 넣어주고 event = event || window.event; 요걸로 event실행되게 함
+				link1.onclick = function(event){
+					event = event || window.event;
+					console.log(event);
+					return false;
+				}
+				//여기 event는 dom의 순수한 event고
+				
+				//이 아래 event는 jQuery로 랩핑된 event가 들어옴!
+				//여기서는 이벤트 객체를 무조건 넣어주게 됨
+			  $("#link2").click(function(event){
+				  console.log(event);
+				 //how1
+				 /* console.log("link1-click");
+				 return false; */
+				 
+				 //how2
+				event.preventDefault(); 
+				 /* jQuery는 반드시 event 객체를 매개값으로 받음! */
+				 
+			  
+			});
+			
+		});
+		
+		</script>
+	</head>
+	
+	<body>
+		<a id="link1" href="http://www.naver.com">네이버</a>
+		<br/>
+		<a id="link2" href="http://www.naver.com">네이버</a>
+	</body>
+</html>

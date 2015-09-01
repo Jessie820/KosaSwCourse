@@ -1,0 +1,107 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+body{
+	width: 960px;
+	margin: 0px auto;
+	background: #e6e6e6;
+}
+
+#page-wrapper{
+	display:flex;
+	flex-direction: column;
+	margin: 40px;
+	padding: 10px; 20px;
+	background: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+}
+
+#main-header{
+	padding: 40px 50px;
+}
+
+.master-title{
+	font-size: 30px;
+	color: #181818;
+}
+
+.master-description{
+	font-size: 15px;
+	/* font-weight: 500; 500이 정상*/
+	color: #383838;
+}
+
+#main-navigation{
+	display:flex;
+	flex-direction: row;
+	border-top: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	height: 40px;
+}
+
+.outer-menu{
+	display:flex;
+	flex-direction: row;
+}
+
+.outer-menu-item{
+	
+	list-style: none;
+}
+
+.menu-title{
+	display: block;
+	line-height:30px;
+	padding: 5px 20px;
+	/* span은 인라인 이므로 블록으로 바꿔줘야 line-height가 먹힌다! */
+}
+
+.inner-menu{
+	display: none;
+}
+
+.pull-left{
+	flex:1;
+}
+
+.pull-right{
+	
+}
+
+#content{
+	flex:1;
+	/* 고정 크기가 아니라 늘어난다. */
+	display:flex;
+}
+
+#main-section{
+	flex:1;
+}
+
+#main-aside{
+	width: 200px;
+	border-left: 1px solid #c8c8c8;
+	padding: 10px 50px;
+	
+}
+
+.aside-list>ul>li{
+	list-style: none;
+}
+
+#main-footer{
+	
+}
+
+
+
+
+
+
+
+
+

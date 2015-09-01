@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			/*브라우저마다 기본 마진과 패딩이 다를 수 있기 때문  */
+		}
+		
+		body {
+		/* 	vmin:50vw; */
+			margin: 0px auto;
+			background: #e6e6e6;
+			
+		}
+		
+		#page-wrapper{
+			/* min-width: 500px;
+			background-color: white; */
+			/* height: 100%; 이거 body한테는 적용되지 않음. 아무것도 없다고 봄*/
+			/* min-height:500px; */
+			height: 100vh; 
+			/*Viewport : 우리가 보는 화면   */
+			/* margin:10px 0px; 바깥쪽은 마진이나 패딩 안 넣는게 좋다고 보시는 선생님..그러나 넣는 사람도 있다. 자기 마음이라고 하심*/
+			display: flex;
+			flex-direction: column;
+		}
+		
+		#main {
+			flex: 1;
+			margin: 20px;
+			background-color:white;
+			
+			/* 브라우저 크기를 줄였나 늘여도 늘 중앙에 오게 하고 싶어서 */
+			
+		}
+		</style>
+	</head>
+	
+	<body>
+		<div id="page-wrapper">
+			<div id="main">
+			
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+

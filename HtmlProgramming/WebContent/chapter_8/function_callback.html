@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var callback = function(){};
+			
+			function callTenTimes(arg){
+				arg();
+			}
+			//함수도 매개값으로 줄 수 있다.
+			callTenTimes(callback);
+			callTenTimes(function(){
+				console.log("함수 호출2");
+			});
+		</script>
+	</head>
+	
+	<body>
+		
+	</body>
+</html>

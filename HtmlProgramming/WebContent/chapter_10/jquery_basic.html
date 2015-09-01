@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				console.log("window.onload");
+			};	
+		
+			$(document).ready(function(){
+				console.log("ready");
+				
+			});
+			
+			function imgLoad1(){
+				console.log("img-load1");
+			}
+			
+			function imgLoad2(){
+				console.log("img-load2");
+			}
+		</script>
+	</head>
+	
+	<body>
+		<img onload="imgLoad1()" id="bigbuck" src="BigBuck.png"/>
+		<img onload="imgLoad2()" src="miniroombg1.gif"/>
+		<!--이미지 객체를 만들고 나서 나중에 다운로드가 되는 것이지 객체가 만들어지면서 다운로드가 되는 것이 아님
+		ready는 모든 객체가 만들어졌을 때 ready가 실행되고 그 다음 이미지 다운로드가 되고 그 다음 window.onload가 실행됨 -->
+	</body>
+</html>

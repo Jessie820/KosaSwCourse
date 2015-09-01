@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+		<style type="text/css">
+		
+			/* 
+			div > .item : div 바로 밑에 있는 클래스가 item인 거(자손만)
+			div .item: div 안에 있는 클래스가 item(후손도 해당)
+			div.item: div 태그에 item 클래스가 지정된 것
+			 */
+			 
+			/*  
+			#container > .item : div 바로 밑에 있는 클래스가 item인 거(자손만)
+			#container .item: div 안에 있는 클래스가 item(후손도 해당)
+			div.item: div 태그에 item 클래스가 지정된 것
+			 */
+			div.item{
+				margin: 0px 3px;
+				padding: 10px;
+				border: 1px solid black;
+				
+				/* display: inline-block; */
+				float: left;
+			}
+			
+			#footer{
+				clear: both;
+			}
+		</style>
+	
+	<body>
+		<p id="header">제목</p>
+		<div id="container">
+			<div class="item">메뉴 -1</div>
+			<div class="item">메뉴 -2</div>
+			<div class="item">메뉴 -3</div>
+			<div class="item">메뉴 -4</div>
+		</div>
+		<p id="footer">주소</p>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				//일반 javascript적인 방법
+				/*  var joinForm = document.joinForm;
+				joinForm.onsubmit = function(){
+				var userName = document.joinForm.userName;
+					
+				if(userName.value == ""){
+						alert("입력을 하세요!");
+						return false;
+					}
+					
+				}; */
+				 
+				 //jQuery적인 방법
+				 $("#joinForm").submit(function(event) {
+					 var value = $("#userName").val();
+					 if(value == ""){
+					 	alert("입력을 하세요!");
+					 //callback 함수. 조건이 되면 나중에 실행한다.
+					 //return false;
+					 event.preventDefault();
+					 }else if(value.replace(/[가-힣]/g, '').length != 0){
+						 alert("한글만 입력하세요!");
+						 var newValue = value.replace("a", "b");
+						 return false;
+					 }
+				 });
+				 
+			});
+		</script>
+	</head>
+	
+	<body>
+		<form id="joinForm"  name="joinForm" action="#">
+			<label>이름</label>
+			<input id="userName" name="userName" type="text" value=""/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+

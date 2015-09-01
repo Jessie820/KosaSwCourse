@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+		
+		
+				/* $("h1").hover(
+					function() {
+						$(this).css({
+							background: "red",
+							color: "white"
+						});
+						//$(this)이렇게 하는 이유는 jQuery가 갖고 있는 메소드 사용하기 위해서
+					}, 
+					function() {
+						$(this).css({
+							background: "",
+							color: ""
+						
+					}); */
+					
+					/*
+					//how2
+					$("h1").on("mouseenter",function() {
+						$(this).css({
+							background: "red",
+							color: "white"
+						}); 
+						
+					});
+				
+					$("h1").on("mouseleave",function() {
+							$(this).css({
+								background: "",
+								color: ""
+						}); 
+					
+				}); */
+				
+				$("h1").on({
+					mouseenter: function(){
+						$(this).css({
+							background: "red",
+							color: "white"
+						});
+					},
+					
+					mouseleave: function(){
+						$(this).css({
+						background: "",
+						color: ""
+						});
+					}
+				});
+			});
+		
+		</script>
+	</head>
+	
+	<body>
+		<h1>Click</h1>
+	</body>
+</html>

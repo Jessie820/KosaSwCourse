@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			//이벤트를 연결합니다.
+			window.onload = function(){ 
+				
+				/*load 이벤트가 발생했을 때 자동적으로 실행. 콜백call back 함수
+				body에 있는 내용 다 실행하고 난 후 다 객체로 만들어지고 나서 그 다음 마지막으로 이 함수가 실행됨*/
+				
+				//문서 객체를 선택합니다.
+				/* var header = document.getElementById('header'); */
+				var header = document.querySelector("#header");
+				
+				//문서 객체를 조작합니다.
+				header.style.color = 'orange';
+				header.style.background = 'red';
+				header.innerHTML = 'From JavaScript';
+			 }; 
+		</script>
+	</head>
+	
+	<body>
+		<h1 id="header">Header</h1>
+	</body>
+</html>

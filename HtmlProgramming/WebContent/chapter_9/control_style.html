@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			window.onload = function(){/* 이벤트가 발생했을 때 처리하는 함수: 이벤트 핸들러 */
+				var output = "";
+				for(var i =0; i <256; i++){
+					output += "<div></div>";
+				}
+				document.body.innerHTML = output;
+				/*  body에 <div></div> 256개 추가 */
+				
+				var divs = document.querySelectorAll("div");
+				/* divs배열 */
+				for (var i=0; i<divs.length; i++){
+					var div = divs[i];
+					
+					div.style.height= "2px";
+					div.style.background = "rgb("+i+","+i+","+i+")";
+				}
+			};
+		</script>
+	</head>
+	
+	<body>
+		
+	</body>
+</html>
