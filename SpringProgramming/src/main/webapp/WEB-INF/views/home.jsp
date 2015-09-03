@@ -14,14 +14,17 @@
 			body {
 				width: 960px;
 				margin: 0px auto;
-				background-color: #292929;
+				background-image: url('resources/image/cloud.jpg');
 				color: #FFFFFF;
+				
+	
 			}	
 			/*------------------------------------*/				
 			#page {
 				height: 100vh;
 				display: flex;
 				flex-direction: column;
+				
 			}
 			/*------------------------------------*/			
 			#header {
@@ -114,53 +117,27 @@
 			<div id="content1">
 				<div id="login"></div>
 				<div id="frontImage">
-					<img src="resources/image/frontImage.jpg"/>
+					<!-- <img src="resources/image/IUU.jpg"/> -->
 				</div>
 			</div>
 			
 			<div id="content2">
 				<div id="menu">
 					<ul>
-						<h4>Chap01</h4>
+						<h4>Chap07</h4>
 						<li><a href="#">1절. XXXXXX</a></li>
 						<li><a href="#">2절. XXXXXX</a></li>
 						<li><a href="#">3절. XXXXXX</a></li>
 					</ul>
 					
 					<ul>
-						<h4>Chap02</h4>
-						<li><a href="#">1절. XXXXXX</a></li>
-						<li><a href="#">2절. XXXXXX</a></li>
-						<li><a href="#">3절. XXXXXX</a></li>
+						<h4>스프링 게시판</h4>
+						<li><a href="board/list" target="iframe">일반 게시판</a></li>
+						<li><a href="product/list" target="iframe">상품 게시판</a></li>
+						<li><a href="photo/list" target="iframe">사진 게시판</a></li>
+						<li><a href="file/list" target="iframe">자료 게시판</a></li>
 					</ul>
-					
-					<ul>
-						<h4>Chap03</h4>
-						<li><a href="#">1절. XXXXXX</a></li>
-						<li><a href="#">2절. XXXXXX</a></li>
-						<li><a href="#">3절. XXXXXX</a></li>
-					</ul>
-					
-					<ul>
-						<h4>Chap04</h4>
-						<li><a href="#">1절. XXXXXX</a></li>
-						<li><a href="#">2절. XXXXXX</a></li>
-						<li><a href="#">3절. XXXXXX</a></li>
-					</ul>
-					
-					<ul>
-						<h4>Chap05</h4>
-						<li><a href="#">1절. XXXXXX</a></li>
-						<li><a href="#">2절. XXXXXX</a></li>
-						<li><a href="#">3절. XXXXXX</a></li>
-					</ul>
-					
-					<ul>
-						<h4>Chap06</h4>
-						<li><a href="#">1절. XXXXXX</a></li>
-						<li><a href="#">2절. XXXXXX</a></li>
-						<li><a href="#">3절. XXXXXX</a></li>
-					</ul>
+				
 				</div>
 				<div id="content">
 					<iframe name="iframe" height="100%" width="100%"></iframe>
