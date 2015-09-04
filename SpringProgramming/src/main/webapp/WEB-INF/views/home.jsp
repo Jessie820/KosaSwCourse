@@ -14,7 +14,7 @@
 			body {
 				width: 960px;
 				margin: 0px auto;
-				background-image: url('resources/image/cloud.jpg');
+				background-image: url('resources/image/outfocuss.jpg');
 				color: #FFFFFF;
 				
 	

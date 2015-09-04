@@ -19,7 +19,7 @@
 	
 	<body>
 		<h4>글쓰기</h4>
-		<form method="post" action="write">
+		<form method="post" action="write" enctype="multipart/form-data">
 			<table>
 				<tr>
 					<td>제목</td>
@@ -33,7 +33,10 @@
 					<td>내용</td>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
 				</tr>
-				
+				<tr>
+					<td>첨부</td>
+					<td><input type="file" name="attach"/></td>
+				</tr>
 				<tr>
 					<td colspan="2" style="text-align: center;">
 						<br/>

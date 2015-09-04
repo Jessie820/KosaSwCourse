@@ -36,6 +36,28 @@
 			a{
 			color: white;
 			}
+			
+			#pager{
+			text-align:center;
+			}
+			#pager a.pageNo {
+				margin-left: 5px;
+				margin-right: 5px;
+			}		
+			
+			#pager a.pageNo.selected {
+				color: aqua;
+			}
+			
+			.title{
+				text-decoration: none;
+				color: white;
+			}
+			
+			.title:hover{
+			
+				color: aqua;
+			}
 		</style>
 	</head>
 	
@@ -55,15 +77,34 @@
 		<c:forEach var="product" items="${list}">
 			<tr>
 				<td>${product.no}</td>
-				<td>${product.getName()}</a></td>
-				<td>${product.getPrice()}</td>
-				<td>${product.getAmount()}</td>
-				<td>${product.getKind()}</td>
-				<td>${product.getContent()}</td>
+				<td><a class="title" href="detail?product_no=${product.no}">${product.name}</a></td>
+				<td>${product.price}</td>
+				<td>${product.amount}</td>
+				<td>${product.kind}</td>
+				<td>${product.content}</td>
 			</tr>
 			
 			</c:forEach>
 		</table>
+		
+		<div id="pager">
+			<a href="list?pageNo=1">[처음]</a>
+			
+			<c:if test="${groupNo>1}">
+				<a href="list?pageNo=${startPageNo-pagesPerGroup}">[이전]</a>
+			</c:if>
+			
+			<c:forEach var="i" begin="${startPageNo}" end="${endPageNo}">
+				<a class='pageNo <c:if test="${pageNo==i}">selected</c:if>' href="list?pageNo=${i}">${i}</a>
+			</c:forEach>
+			
+			<c:if test="${groupNo<totalGroupNo}">
+				<a href="list?pageNo=${endPageNo+1}">[다음]</a>
+			</c:if>
+			
+			<a href="list?pageNo=${totalPageNo}">[맨끝]</a>
+		</div>		
+		
 		<div id="buttonGroup">
 		<a href="writeForm">글쓰기</a>
 		</div>

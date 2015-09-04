@@ -25,7 +25,7 @@ public class ProductDao {
 
 	public Integer insert(Product product) {
 		Integer pk = null;
-		String sql = "insert into products(product_name, product_price, product_amount, product_kind, product_content) values(?,?,?,?,?)";
+		String sql = "insert into products(product_name, product_price, product_amount, product_kind, product_content, product_original_file_name, product_filesystem_name, product_content_type) values(?,?,?,?,?,?,?,?)";
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 
 		jdbcTemplate.update(new PreparedStatementCreator() {
@@ -37,6 +37,9 @@ public class ProductDao {
 				pstmt.setLong(3, product.getAmount());
 				pstmt.setString(4, product.getKind());
 				pstmt.setString(5, product.getContent());
+				pstmt.setString(6, product.getOriginalFileName());
+				pstmt.setString(7, product.getFilesystemName());
+				pstmt.setString(8, product.getContentType());
 				return pstmt;
 			}
 
@@ -90,6 +93,9 @@ public class ProductDao {
 				product.setAmount(rs.getInt("product_amount"));
 				product.setKind(rs.getString("product_kind"));
 				product.setContent(rs.getString("product_content"));
+				product.setOriginalFileName(rs.getString("product_original_file_name"));
+				product.setFilesystemName(rs.getString("product_filesystem_name"));
+				product.setContentType(rs.getString("product_content_type"));
 				return product;
 			}
 
@@ -113,4 +119,14 @@ public class ProductDao {
 		int rows = jdbcTemplate.update(sql, productNo);
 		return rows;
 	}
+
+	public int selectCount(){
+		
+		String sql = "";
+		sql +="select count(*) from products";
+		int rows = jdbcTemplate.queryForObject(sql,Integer.class);
+		return rows;
+	}
+
+	
 }

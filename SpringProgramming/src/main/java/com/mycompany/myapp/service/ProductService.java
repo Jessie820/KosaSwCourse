@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.mycompany.myapp.dao.ProductDao;
+import com.mycompany.myapp.dto.Board;
 import com.mycompany.myapp.dto.Product;
 
 @Component
@@ -43,4 +44,19 @@ public class ProductService {
 		productDao.delete(productNo);
 
 	}
+
+	
+	
+	public Product getProduct(int productNo){
+		Product product = productDao.selectByPk(productNo);
+	
+			return product;
+}
+
+	public int getTotalProductNo() {
+		int rows = productDao.selectCount();
+		return rows;
+	}
+			
+
 }
